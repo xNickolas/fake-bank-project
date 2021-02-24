@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.SiteModule = void 0;
 var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
+var annuity_component_1 = require("./modules/annuity/annuity.component");
 var create_account_form_component_1 = require("./modules/create-account-form/create-account-form.component");
 var digital_account_component_1 = require("./modules/digital-account/digital-account.component");
 var home_component_1 = require("./modules/home/home.component");
@@ -22,6 +23,7 @@ var SiteModule = /** @class */ (function () {
                 home_component_1.HomeComponent,
                 create_account_form_component_1.CreateAccountFormComponent,
                 digital_account_component_1.DigitalAccountComponent,
+                annuity_component_1.AnnuityComponent,
             ],
             imports: [
                 common_1.CommonModule,
@@ -31,6 +33,7 @@ var SiteModule = /** @class */ (function () {
                 home_component_1.HomeComponent,
                 create_account_form_component_1.CreateAccountFormComponent,
                 digital_account_component_1.DigitalAccountComponent,
+                annuity_component_1.AnnuityComponent,
             ]
         })
     ], SiteModule);

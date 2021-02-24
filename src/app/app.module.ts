@@ -9,7 +9,7 @@ import { SiteModule } from './modules/site/site.module';
 @NgModule({
   declarations: [
     AppComponent,
-    SiteComponent
+    SiteComponent,
   ],
   imports: [
     BrowserModule,

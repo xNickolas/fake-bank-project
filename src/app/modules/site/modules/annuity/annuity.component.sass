@@ -7,15 +7,16 @@
   height:100vh
   display: flex
   align-items: center
-  justify-content: space-around
   flex-direction: row
-  flex-wrap: wrap
+  width: 100%
+  justify-content: center
 
+.annuity-text
+  padding:2em
 .annuity-title-text
   font-weight: bold
   color: $white
   font-size:3em
-
 
 .annuity-discription-text
   font-weight: 400
@@ -31,9 +32,12 @@
 
 @media screen and (max-width: $screen-lg-min) 
   .annuity-container
-    height:90%
+    height:90vh
+    flex-direction: column
+
   .annuity-price-text
     font-size: 8em
   .annuity-discription-text
     max-width:100%
+
 

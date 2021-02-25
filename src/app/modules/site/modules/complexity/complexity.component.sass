@@ -1,42 +1,35 @@
 
 @import 'src/sass/colors'
+@import 'src/sass/display'
 
 .complexity-container
-  background: url(../../../../../assets/images/guys.png) no-repeat center $green
+  background: url(/assets/images/guys.png) no-repeat center $green
   background-size: cover
-  height: 900px
-  left: 0px
-  top: 0px
-  align-items: center
+  height:100vh
+  display: flex
+  flex-direction: column
+  padding-left: calc(20% - 3em)
   justify-content: center
-  display: flex
+  width: 100%
 
-.conplexity-content
-  display: flex
-  align-items: center
 
 .complexity-content-title
-  position: absolute
-  width: 459px
-  height: 50px
-  left: 290px
-  top: 3089px
-  font-style: normal
   font-weight: bold
-  font-size: 42px
   line-height: 49px
   color: $white
+  font-size:3em
 
 .complexity-content-discription
-  position: absolute
-  width: 459px
-  height: 50px
-  left: 290px
-  top: 3175px
-  font-style: normal
   font-weight: 500
-  font-size: 23px
   line-height: 27px
-  display: flex
-  align-items: center
   color: $white
+  font-size:1.2em
+
+
+@media screen and (max-width: $screen-lg-min) 
+  .complexity-container
+    height:90vh
+  .complexity-content-title
+    font-size: 2.5em
+  .complexity-content-discription
+    max-width:100%

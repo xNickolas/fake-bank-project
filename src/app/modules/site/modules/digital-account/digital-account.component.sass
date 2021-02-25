@@ -8,52 +8,67 @@
   flex-direction: row
   justify-content: center
   flex-flow: wrap
+  padding:5em
   
 .gama-digital, .credit-card
   display: flex
   flex-direction: column
-  flex-grow: 1
-  flex-basis: 0
-  max-width: 600px
-  justify-content: flex-start
+  max-width: 100%
+  //padding: 2em
+  flex-grow:1
+  flex-basis:0
 
 .gama-digital
   background-color: $black
   
 .credit-card
-  background: $white-dark
+  background-color: $white-dark
+  padding-left: 5rem
 
 .gama-digital-title
-  line-height: 40px
   color: $green
   margin-bottom:0.5em
+  margin:5rem
 
 .credit-card-title
-  line-height: 40px
   color: $black-dark
   margin-bottom:0.5em
+  margin-top:5rem
 
 .gama-digital-bg
   max-width: 400px
 
 .credit-card-bg
   max-width: 300px
-  margin-bottom:1em
+  margin:5rem 0rem
 
 .gama-digital-discription, .credit-card-discription
   max-width: 300px
   font-size: 21px
   line-height: 25px
 
+
 .gama-digital-discription
   color: $green
+  margin:2rem 5em
+
 
 .credit-card-discription
   color: $black-dark
 
-  @media screen and (max-width: $screen-lg-min) 
-  .account-details 
+@media screen and (max-width: $screen-lg-min) 
+  .account-details, .credit-card
     flex-direction: column
     align-items: center
-    margin:0
-    padding: 0
+    padding:0em
+
+  .gama-digital-title, .credit-card-title, 
+  .gama-digital-discription, .credit-card-discription
+    text-align: center
+    margin:2rem
+  .credit-card-bg
+    width:70%
+    margin:0rem
+
+
+

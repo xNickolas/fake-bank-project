@@ -6,6 +6,7 @@ import { ComplexityComponent } from './modules/complexity/complexity.component';
 import { CreateAccountFormComponent } from './modules/create-account-form/create-account-form.component';
 import { DigitalAccountComponent } from './modules/digital-account/digital-account.component';
 import { HomeComponent } from './modules/home/home.component';
+import { SimplifyLifeComponent } from './modules/simplify-life/simplify-life.component';
 import { SiteRoutingModule } from './site.routing.module';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { SiteRoutingModule } from './site.routing.module';
     DigitalAccountComponent,
     AnnuityComponent,
     ComplexityComponent,
+    SimplifyLifeComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { SiteRoutingModule } from './site.routing.module';
     CreateAccountFormComponent,
     DigitalAccountComponent,
     AnnuityComponent,
-    ComplexityComponent
+    ComplexityComponent,
+    SimplifyLifeComponent
   ]
 })
 export class SiteModule { }

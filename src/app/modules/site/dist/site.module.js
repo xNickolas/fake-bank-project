@@ -14,6 +14,7 @@ var complexity_component_1 = require("./modules/complexity/complexity.component"
 var create_account_form_component_1 = require("./modules/create-account-form/create-account-form.component");
 var digital_account_component_1 = require("./modules/digital-account/digital-account.component");
 var home_component_1 = require("./modules/home/home.component");
+var simplify_life_component_1 = require("./modules/simplify-life/simplify-life.component");
 var site_routing_module_1 = require("./site.routing.module");
 var SiteModule = /** @class */ (function () {
     function SiteModule() {
@@ -26,6 +27,7 @@ var SiteModule = /** @class */ (function () {
                 digital_account_component_1.DigitalAccountComponent,
                 annuity_component_1.AnnuityComponent,
                 complexity_component_1.ComplexityComponent,
+                simplify_life_component_1.SimplifyLifeComponent
             ],
             imports: [
                 common_1.CommonModule,
@@ -36,7 +38,8 @@ var SiteModule = /** @class */ (function () {
                 create_account_form_component_1.CreateAccountFormComponent,
                 digital_account_component_1.DigitalAccountComponent,
                 annuity_component_1.AnnuityComponent,
-                complexity_component_1.ComplexityComponent
+                complexity_component_1.ComplexityComponent,
+                simplify_life_component_1.SimplifyLifeComponent
             ]
         })
     ], SiteModule);

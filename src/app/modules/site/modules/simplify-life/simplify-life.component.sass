@@ -1,19 +1,19 @@
 @import 'src/sass/colors'
+@import 'src/sass/display'
 
 .simplify-container
   background-size: cover
-  height: 900px
-  left: 0px
-  top: 0px
+  height: 100hv
   align-items: center
   display: flex
+  flex-direction: row
+  align-items: center
+  padding: 4rem 2rem
+  justify-content: space-around
 
-.simplify-details .simplify-title
-  width: 444px
+.simplify-details
   color: $black
-
-.ml-5 
-  margin-left: 15rem !important
+  width:30%
 
 .simplify-details p 
   font-style: normal
@@ -23,8 +23,13 @@
   display: flex
   align-items: center
   color: $black
+  display: inline-block
 
 .simplify-card
-  width: 441px
-  height: 604px
+  width: 100%
   
+@media screen and (max-width: $screen-lg-min) 
+  .simplify-container
+    flex-direction: column
+  .simplify-details
+    width:100%

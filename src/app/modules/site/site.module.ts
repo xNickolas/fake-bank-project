@@ -7,28 +7,25 @@ import { CreateAccountFormComponent } from './modules/create-account-form/create
 import { DigitalAccountComponent } from './modules/digital-account/digital-account.component';
 import { HomeComponent } from './modules/home/home.component';
 import { SimplifyLifeComponent } from './modules/simplify-life/simplify-life.component';
+import { SiteComponent } from './site.component';
 import { SiteRoutingModule } from './site.routing.module';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    CreateAccountFormComponent,
-    DigitalAccountComponent,
-    AnnuityComponent,
-    ComplexityComponent,
-    SimplifyLifeComponent
+      SiteComponent,
+      HomeComponent,
+      CreateAccountFormComponent,
+      DigitalAccountComponent,
+      AnnuityComponent,
+      ComplexityComponent,
+      SimplifyLifeComponent
   ],
   imports: [
     CommonModule,
     SiteRoutingModule,
   ],
   exports: [
-    HomeComponent,
-    CreateAccountFormComponent,
-    DigitalAccountComponent,
-    AnnuityComponent,
-    ComplexityComponent,
-    SimplifyLifeComponent
+    SiteComponent
   ]
 })
 export class SiteModule { }

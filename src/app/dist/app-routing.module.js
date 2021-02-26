@@ -10,7 +10,9 @@ exports.AppRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var routes = [
-    { path: '', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); } }
+    { path: '', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); } },
+    { path: 'dashboard', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/dashboard/dashboard.module'); }).then(function (m) { return m.DashboardModule; }); } }
+
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

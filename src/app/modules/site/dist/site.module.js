@@ -8,13 +8,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.SiteModule = void 0;
 var common_1 = require("@angular/common");
+var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var annuity_component_1 = require("./modules/annuity/annuity.component");
 var complexity_component_1 = require("./modules/complexity/complexity.component");
 var create_account_form_component_1 = require("./modules/create-account-form/create-account-form.component");
 var digital_account_component_1 = require("./modules/digital-account/digital-account.component");
 var home_component_1 = require("./modules/home/home.component");
 var simplify_life_component_1 = require("./modules/simplify-life/simplify-life.component");
+var site_component_1 = require("./site.component");
 var site_routing_module_1 = require("./site.routing.module");
 var SiteModule = /** @class */ (function () {
     function SiteModule() {
@@ -22,6 +25,7 @@ var SiteModule = /** @class */ (function () {
     SiteModule = __decorate([
         core_1.NgModule({
             declarations: [
+                site_component_1.SiteComponent,
                 home_component_1.HomeComponent,
                 create_account_form_component_1.CreateAccountFormComponent,
                 digital_account_component_1.DigitalAccountComponent,
@@ -32,14 +36,12 @@ var SiteModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule,
                 site_routing_module_1.SiteRoutingModule,
+                http_1.HttpClientModule,
+                forms_1.FormsModule,
+                forms_1.ReactiveFormsModule
             ],
             exports: [
-                home_component_1.HomeComponent,
-                create_account_form_component_1.CreateAccountFormComponent,
-                digital_account_component_1.DigitalAccountComponent,
-                annuity_component_1.AnnuityComponent,
-                complexity_component_1.ComplexityComponent,
-                simplify_life_component_1.SimplifyLifeComponent
+                site_component_1.SiteComponent
             ]
         })
     ], SiteModule);

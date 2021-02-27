@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AnnuityComponent } from './modules/annuity/annuity.component';
 import { ComplexityComponent } from './modules/complexity/complexity.component';
@@ -23,6 +25,9 @@ import { SiteRoutingModule } from './site.routing.module';
   imports: [
     CommonModule,
     SiteRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     SiteComponent

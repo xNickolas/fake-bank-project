@@ -15,6 +15,8 @@ var latest_statements_component_1 = require("./components/latest-statements/late
 var sidebar_component_1 = require("./components/sidebar/sidebar.component");
 var dashboard_routing_module_1 = require("./dashboard-routing.module");
 var dashboard_component_1 = require("./dashboard.component");
+var deposits_component_1 = require("./pages/deposits/deposits.component");
+var plans_component_1 = require("./pages/plans/plans.component");
 var DashboardModule = /** @class */ (function () {
     function DashboardModule() {
     }
@@ -26,6 +28,8 @@ var DashboardModule = /** @class */ (function () {
                 account_component_1.AccountComponent,
                 credit_account_component_1.CreditAccountComponent,
                 latest_statements_component_1.LatestStatementsComponent,
+                deposits_component_1.DepositsComponent,
+                plans_component_1.PlansComponent,
             ],
             imports: [
                 common_1.CommonModule,
@@ -37,6 +41,8 @@ var DashboardModule = /** @class */ (function () {
                 account_component_1.AccountComponent,
                 credit_account_component_1.CreditAccountComponent,
                 latest_statements_component_1.LatestStatementsComponent,
+                deposits_component_1.DepositsComponent,
+                plans_component_1.PlansComponent,
             ]
         })
     ], DashboardModule);

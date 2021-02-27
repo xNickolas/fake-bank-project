@@ -7,6 +7,8 @@ import { LatestStatementsComponent } from './components/latest-statements/latest
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
+import { DepositsComponent } from './pages/deposits/deposits.component';
+import { PlansComponent } from './pages/plans/plans.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { DashboardComponent } from './dashboard.component';
     AccountComponent,
     CreditAccountComponent,
     LatestStatementsComponent,
+    DepositsComponent,
+    PlansComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +31,8 @@ import { DashboardComponent } from './dashboard.component';
     AccountComponent,
     CreditAccountComponent,
     LatestStatementsComponent,
+    DepositsComponent,
+    PlansComponent,
   ]
 })
 export class DashboardModule { }

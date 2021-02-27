@@ -10,7 +10,7 @@ exports.DashboardComponent = void 0;
 var core_1 = require("@angular/core");
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent() {
-        this.nameUser = 'Nickolas Moreira';
+        this.nameUser = 'Usuário';
     }
     DashboardComponent.prototype.ngOnInit = function () {
     };

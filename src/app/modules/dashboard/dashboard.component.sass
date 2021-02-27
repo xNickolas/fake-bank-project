@@ -1,11 +1,13 @@
 @import 'src/sass/colors'
-
+@import 'src/sass/display'
 
 .dashboard-container
   background-color: $purple
   min-height: 100vh
+  margin: 0
   display: flex
   margin: 0
+  flex-direction: row
 
 .cards-wrapper
   width: 100%
@@ -39,7 +41,10 @@
 .hidden, img
   cursor: pointer
 
-
 .cads-accounts
   display: flex
   align-items: center
+
+@media screen and (max-width: $screen-lg-min) 
+  .dashboard-container
+    flex-direction: column

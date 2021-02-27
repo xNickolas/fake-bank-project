@@ -6,22 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.AppRoutingModule = void 0;
+exports.DashboardRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var dashboard_component_1 = require("./dashboard.component");
 var routes = [
-    { path: '', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); } },
-    { path: 'dashboard', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/dashboard/dashboard.module'); }).then(function (m) { return m.DashboardModule; }); } }
+    { path: '', component: dashboard_component_1.DashboardComponent }
 ];
-var AppRoutingModule = /** @class */ (function () {
-    function AppRoutingModule() {
+var DashboardRoutingModule = /** @class */ (function () {
+    function DashboardRoutingModule() {
     }
-    AppRoutingModule = __decorate([
+    DashboardRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes)],
+            imports: [router_1.RouterModule.forChild(routes)],
             exports: [router_1.RouterModule]
         })
-    ], AppRoutingModule);
-    return AppRoutingModule;
+    ], DashboardRoutingModule);
+    return DashboardRoutingModule;
 }());
-exports.AppRoutingModule = AppRoutingModule;
+exports.DashboardRoutingModule = DashboardRoutingModule;

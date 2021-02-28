@@ -1,73 +1,76 @@
 @import 'src/sass/colors'
+@import 'src/sass/display'
+
 
 .card-account-container
-  width: 500px
-
-.card-account-body
-  width: 420px
-  height: 270px
-  padding: 1.50rem 1.90rem 1.50rem 1.90rem
+  //width: 500px
+  //width: 420px
+  //height: 270px
+  padding: 2rem
   background: $white
   border-radius: 8px
 
-.card-name
+.card-name-account
   display: flex
+  flex-direction: row
+  justify-content: flex-start
   align-items: center
-  text-align: center
 
-.card-name-text
-  font-style: normal
-  font-weight: normal
+.card-img-account
+  width: 2rem
+
+.card-name-text-account
   font-size: 18px
   line-height: 21px
   display: flex
-  align-items: center
-  text-align: center
   color: $gray-dark
+  margin: 0!important
+
 
 .card-balance
-  display: inline-block
-
-.card-balance-title
-  font-style: normal
-  font-weight: normal
-  font-size: 18px
-  line-height: 21px
   display: flex
-  align-items: center
-  text-align: center
-  color: $gray-dark
+  flex-direction: column
+  align-items: flex-start
 
-.card-balance-amount
-  font-style: normal
-  font-weight: bold
-  font-size: 30px
-  line-height: 35px
-  display: flex
-  align-items: center
+.card-balance .card-title-account
+  margin: 0!important
+
+.card-balance .card-account-amount
   color: $black
-
 
 .card-account-details
   display: flex
+  flex-direction: row
+  flex-wrap: wrap
   justify-content: space-between
+  align-items: center
 
-.card-details-title
+.card-account-details .card-account-amount
+  color: $green
+
+.card-title-account
   font-style: normal
   font-weight: normal
   font-size: 18px
   line-height: 21px
-  display: flex
-  align-items: center
-  text-align: center
   color: $gray-dark
 
-.card-details-amount
+.card-account-amount
   font-style: normal
   font-weight: bold
   font-size: 30px
   line-height: 35px
-  display: flex
-  align-items: center
-  text-align: right
-  color: $green
+
+@media screen and (max-width: $screen-lg-min) 
+  .dashboard-container
+    flex-direction: column
+
+  .card-account-details
+    flex-direction: column
+
+  .card-account-details 
+    align-items: flex-start
+    
+  .card-title-account
+    margin: 0!important
+

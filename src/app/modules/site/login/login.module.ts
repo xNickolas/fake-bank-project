@@ -14,7 +14,10 @@ import { LoginComponent } from './login.component';
   imports: [
     CommonModule,
     LoginRoutingModule,
+<<<<<<< HEAD
     DashboardModule,
+=======
+>>>>>>> fb23fd554fa3ac7d102d2703ba3239b5485850da
     FormsModule,
     ReactiveFormsModule,
   ],

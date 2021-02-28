@@ -1,73 +1,68 @@
 @import 'src/sass/colors'
+@import 'src/sass/display'
+
 
 .card-credit-account-container
-  width: 500px
-
-.card-credit-account-body
-  width: 420px
-  height: 270px
-  padding: 1.50rem 1.90rem 1.50rem 1.90rem
+  padding: 2rem
   background: $white
   border-radius: 8px
 
 .card-name
   display: flex
+  flex-direction: row
+  justify-content: flex-start
   align-items: center
-  text-align: center
+
+.card-img
+  width: 2.2rem
 
 .card-name-text
-  font-style: normal
-  font-weight: normal
   font-size: 18px
   line-height: 21px
   display: flex
-  align-items: center
-  text-align: center
   color: $gray-dark
+  margin: 0!important
+
 
 .card-bill
-  display: inline-block
-
-.card-bill-title
-  font-style: normal
-  font-weight: normal
-  font-size: 18px
-  line-height: 21px
   display: flex
-  align-items: center
-  text-align: center
-  color: $gray-dark
+  flex-direction: column
+  align-items: flex-start
 
-.card-bill-amount
-  font-style: normal
-  font-weight: bold
-  font-size: 30px
-  line-height: 35px
-  display: flex
-  align-items: center
+.card-bill .card-title
+  margin: 0!important
+
+.card-bill .card-acc-amount
   color: $blue
 
-
-.card-credit-account-details
+.card-credit-acc-details
   display: flex
+  flex-direction: row
+  flex-wrap: wrap
   justify-content: space-between
+  align-items: center
 
-.card-details-title
+.card-credit-acc-details .card-acc-amount
+  color: $green
+
+.card-title
   font-style: normal
   font-weight: normal
   font-size: 18px
   line-height: 21px
-  display: flex
-  align-items: center
-  text-align: center
   color: $gray-dark
 
-.card-details-amount
+.card-acc-amount
   font-style: normal
   font-weight: bold
   font-size: 30px
   line-height: 35px
-  display: flex
-  align-items: center
-  text-align: right
-  color: $green
+
+@media screen and (max-width: $screen-lg-min) 
+  .card-credit-acc-details
+    flex-direction: column
+    align-items: flex-start
+
+  .card-title
+    margin: 0!important
+

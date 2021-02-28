@@ -23,7 +23,7 @@ var CreateAccountService = /** @class */ (function () {
         var httpOptions = {
             headers: headers
         };
-        return this.http.post(this.API_URL + '/usuarios', user, httpOptions);
+        return this.http.post(this.API_URL + "/usuarios", user, httpOptions);
     };
     CreateAccountService = __decorate([
         core_1.Injectable({

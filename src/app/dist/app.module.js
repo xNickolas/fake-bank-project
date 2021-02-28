@@ -15,10 +15,8 @@ var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
-var dashboard_module_1 = require("./modules/dashboard/dashboard.module");
-var login_module_1 = require("./modules/site/login/login.module");
 var site_module_1 = require("./modules/site/site.module");
-common_1.registerLocaleData(pt_1["default"], 'pt');
+common_1.registerLocaleData(pt_1["default"]);
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -28,11 +26,11 @@ var AppModule = /** @class */ (function () {
                 app_component_1.AppComponent,
             ],
             imports: [
-                platform_browser_1.BrowserModule,
+                common_1.CommonModule,
                 app_routing_module_1.AppRoutingModule,
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
                 site_module_1.SiteModule,
-                dashboard_module_1.DashboardModule,
-                login_module_1.LoginModule,
                 http_1.HttpClientModule,
                 forms_1.ReactiveFormsModule,
             ],

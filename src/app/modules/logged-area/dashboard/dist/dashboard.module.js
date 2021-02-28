@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.DashboardModule = void 0;
 var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var account_component_1 = require("./components/account/account.component");
 var credit_account_component_1 = require("./components/credit-account/credit-account.component");
 var latest_statements_component_1 = require("./components/latest-statements/latest-statements.component");
@@ -33,17 +34,10 @@ var DashboardModule = /** @class */ (function () {
             ],
             imports: [
                 common_1.CommonModule,
+                router_1.RouterModule,
                 dashboard_routing_module_1.DashboardRoutingModule
             ],
-            exports: [
-                dashboard_component_1.DashboardComponent,
-                sidebar_component_1.SidebarComponent,
-                account_component_1.AccountComponent,
-                credit_account_component_1.CreditAccountComponent,
-                latest_statements_component_1.LatestStatementsComponent,
-                deposits_component_1.DepositsComponent,
-                plans_component_1.PlansComponent,
-            ]
+            exports: []
         })
     ], DashboardModule);
     return DashboardModule;

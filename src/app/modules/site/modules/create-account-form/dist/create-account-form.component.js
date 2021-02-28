@@ -43,7 +43,7 @@ var CreateAccountFormComponent = /** @class */ (function () {
             .subscribe(function (response) { return _this.onSucessCreateAccount(); }, function (error) { return _this.onError(error); });
     };
     CreateAccountFormComponent.prototype.onSucessCreateAccount = function () {
-        this.router.navigate(['/login']);
+        this.router.navigate(['login']);
     };
     CreateAccountFormComponent.prototype.showError = function (nomeControle) {
         if (this.registerForm.get(nomeControle)) {

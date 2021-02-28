@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
@@ -20,16 +19,15 @@ export class LoginService {
   constructor(
     private authService: AuthService,
     private http: HttpClient,
-    private router: Router,
   ) { }
 
   logIn(usuario: Login): Observable<LoginResponse> {
     // return this.http.post(this.API_URL + '/contatos/' + id, this.httpOptions);
-      return this.http.post<LoginResponse>(this.API_URL + '/login', usuario)
+      return this.http.post<LoginResponse>(`${this.API_URL}/login`, usuario)
       .pipe(
         delay(1000),
         tap( response => {
-          this.authService.setUser(response.user);
+          this.authService.setUser(response.usuario);
           this.authService.setToken(response.token);
         })
       );

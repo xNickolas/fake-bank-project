@@ -10,7 +10,6 @@ exports.LoginModule = void 0;
 var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
-var dashboard_module_1 = require("../../dashboard/dashboard.module");
 var login_routing_module_1 = require("./login-routing.module");
 var login_component_1 = require("./login.component");
 var LoginModule = /** @class */ (function () {
@@ -26,11 +25,8 @@ var LoginModule = /** @class */ (function () {
                 login_routing_module_1.LoginRoutingModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
-                dashboard_module_1.DashboardModule,
             ],
-            exports: [
-                login_component_1.LoginComponent,
-            ]
+            exports: []
         })
     ], LoginModule);
     return LoginModule;

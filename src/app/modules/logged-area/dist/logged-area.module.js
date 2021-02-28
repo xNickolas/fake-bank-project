@@ -6,22 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.DashboardRoutingModule = void 0;
+exports.LoggedAreaModule = void 0;
+var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./dashboard.component");
-var routes = [
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent }
-];
-var DashboardRoutingModule = /** @class */ (function () {
-    function DashboardRoutingModule() {
+var logged_area_routing_module_1 = require("./logged-area-routing.module");
+var logged_area_component_1 = require("./logged-area.component");
+var LoggedAreaModule = /** @class */ (function () {
+    function LoggedAreaModule() {
     }
-    DashboardRoutingModule = __decorate([
+    LoggedAreaModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forChild(routes)],
-            exports: [router_1.RouterModule]
+            declarations: [
+                logged_area_component_1.LoggedAreaComponent,
+            ],
+            imports: [
+                common_1.CommonModule,
+                logged_area_routing_module_1.LoggedAreaRoutingModule
+            ]
         })
-    ], DashboardRoutingModule);
-    return DashboardRoutingModule;
+    ], LoggedAreaModule);
+    return LoggedAreaModule;
 }());
-exports.DashboardRoutingModule = DashboardRoutingModule;
+exports.LoggedAreaModule = LoggedAreaModule;

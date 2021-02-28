@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AccountComponent } from './components/account/account.component';
 import { CreditAccountComponent } from './components/credit-account/credit-account.component';
@@ -23,16 +24,9 @@ import { PlansComponent } from './pages/plans/plans.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     DashboardRoutingModule
   ],
-  exports: [
-    DashboardComponent,
-    SidebarComponent,
-    AccountComponent,
-    CreditAccountComponent,
-    LatestStatementsComponent,
-    DepositsComponent,
-    PlansComponent,
-  ]
+  exports: []
 })
 export class DashboardModule { }

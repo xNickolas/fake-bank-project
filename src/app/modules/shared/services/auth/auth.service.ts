@@ -16,7 +16,7 @@ export class AuthService {
 
   setUser(user: User){
     this.user = user;
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('usurario', JSON.stringify(user));
   }
 
   getUser() {
@@ -24,7 +24,7 @@ export class AuthService {
       return this.user;
     }
 
-    const savedUser = localStorage.getItem('user');
+    const savedUser = localStorage.getItem('usuario');
 
     if (savedUser) {
       this.user = JSON.parse(savedUser);
@@ -62,10 +62,10 @@ export class AuthService {
     return false;
   }
 
-  // logOut() {
-  //   this.user = null;
-  //   this.token = null;
-  //   localStorage.clear();
-  //   this.router.navigate(['/login']);
-  // }
+  logOut() {
+    this.user = null;
+    this.token = null;
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
 }

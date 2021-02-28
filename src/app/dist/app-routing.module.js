@@ -12,10 +12,20 @@ var router_1 = require("@angular/router");
 var is_logged_guard_1 = require("./modules/shared/guards/is-logged/is-logged.guard");
 var not_logged_guard_1 = require("./modules/shared/guards/not-logged/not-logged.guard");
 var routes = [
-    { path: '', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); }
+    {
+        path: '',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); }
     },
-    { path: 'dashboard', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/dashboard/dashboard.module'); }).then(function (m) { return m.DashboardModule; }); }, canActivate: [is_logged_guard_1.IsLoggedGuard] },
-    { path: 'login', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/login/login.module'); }).then(function (m) { return m.LoginModule; }); }, canActivate: [not_logged_guard_1.NotLoggedGuard] },
+    {
+        path: '#',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/logged-area/logged-area.module'); }).then(function (m) { return m.LoggedAreaModule; }); },
+        canActivate: [is_logged_guard_1.IsLoggedGuard]
+    },
+    {
+        path: 'login',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/login/login.module'); }).then(function (m) { return m.LoginModule; }); },
+        canActivate: [not_logged_guard_1.NotLoggedGuard]
+    },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

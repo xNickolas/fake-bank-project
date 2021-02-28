@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
 
   loginForm() {
     this.login = this.fb.group({
-      user: ['', Validators.required],
-      password: ['', Validators.required],
+      usuario: ['', Validators.required],
+      senha: ['', Validators.required],
     });
   }
 
@@ -49,16 +49,14 @@ export class LoginComponent implements OnInit {
     )
     .subscribe(
       response => this.onSucessLogin(),
-      error => this.onError(error),
+      error => {
+        console.log(error);
+      }
     );
   }
 
   onSucessLogin() {
-    this.router.navigate(['/dashboard']);
-  }
-
-  onError(error: any){
-    console.log(error);
+    this.router.navigate(['/#/dashboard/']);
   }
 
 }

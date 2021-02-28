@@ -61,7 +61,7 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   onSucessCreateAccount(){
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
 
   showError(nomeControle: string) {

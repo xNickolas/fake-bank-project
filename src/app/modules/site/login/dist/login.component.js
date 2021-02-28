@@ -22,8 +22,8 @@ var LoginComponent = /** @class */ (function () {
     };
     LoginComponent.prototype.loginForm = function () {
         this.login = this.fb.group({
-            user: ['', forms_1.Validators.required],
-            password: ['', forms_1.Validators.required]
+            usuario: ['', forms_1.Validators.required],
+            senha: ['', forms_1.Validators.required]
         });
     };
     LoginComponent.prototype.onSubmit = function () {
@@ -36,13 +36,12 @@ var LoginComponent = /** @class */ (function () {
         var _this = this;
         this.loginService.logIn(this.login.value)
             .pipe(operators_1.take(1))
-            .subscribe(function (response) { return _this.onSucessLogin(); }, function (error) { return _this.onError(error); });
+            .subscribe(function (response) { return _this.onSucessLogin(); }, function (error) {
+            console.log(error);
+        });
     };
     LoginComponent.prototype.onSucessLogin = function () {
-        this.router.navigate(['/dashboard']);
-    };
-    LoginComponent.prototype.onError = function (error) {
-        console.log(error);
+        this.router.navigate(['/#/dashboard/']);
     };
     LoginComponent = __decorate([
         core_1.Component({

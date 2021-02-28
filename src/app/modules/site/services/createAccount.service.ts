@@ -23,7 +23,7 @@ export class CreateAccountService {
     let httpOptions = {
       headers: headers,
     };
-    return this.http.post<User>(this.API_URL + '/usuarios', user, httpOptions);
+    return this.http.post<User>(`${this.API_URL}/usuarios`, user, httpOptions);
   }
 
 }

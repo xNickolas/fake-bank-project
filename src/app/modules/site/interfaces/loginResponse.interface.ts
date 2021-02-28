@@ -1,6 +1,6 @@
 import { User } from './createAccount.interface';
 
 export interface LoginResponse {
-  user: User;
+  usuario: User;
   token: string;
 }

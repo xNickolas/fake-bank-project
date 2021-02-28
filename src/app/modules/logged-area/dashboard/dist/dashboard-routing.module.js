@@ -6,22 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.LoginRoutingModule = void 0;
+exports.DashboardRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var login_component_1 = require("./login.component");
+var dashboard_component_1 = require("./dashboard.component");
 var routes = [
-    { path: '', component: login_component_1.LoginComponent },
-];
-var LoginRoutingModule = /** @class */ (function () {
-    function LoginRoutingModule() {
+    {
+        path: 'dashboard', component: dashboard_component_1.DashboardComponent
     }
-    LoginRoutingModule = __decorate([
+];
+var DashboardRoutingModule = /** @class */ (function () {
+    function DashboardRoutingModule() {
+    }
+    DashboardRoutingModule = __decorate([
         core_1.NgModule({
             imports: [router_1.RouterModule.forChild(routes)],
             exports: [router_1.RouterModule]
         })
-    ], LoginRoutingModule);
-    return LoginRoutingModule;
+    ], DashboardRoutingModule);
+    return DashboardRoutingModule;
 }());
-exports.LoginRoutingModule = LoginRoutingModule;
+exports.DashboardRoutingModule = DashboardRoutingModule;

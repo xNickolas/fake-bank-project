@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { DashboardModule } from '../../dashboard/dashboard.module';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './login.component';
 
@@ -16,10 +15,7 @@ import { LoginComponent } from './login.component';
     LoginRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    DashboardModule,
   ],
-  exports: [
-    LoginComponent,
-  ]
+  exports: []
 })
 export class LoginModule { }

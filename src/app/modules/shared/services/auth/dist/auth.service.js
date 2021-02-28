@@ -14,13 +14,13 @@ var AuthService = /** @class */ (function () {
     }
     AuthService.prototype.setUser = function (user) {
         this.user = user;
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('usurario', JSON.stringify(user));
     };
     AuthService.prototype.getUser = function () {
         if (this.user) {
             return this.user;
         }
-        var savedUser = localStorage.getItem('user');
+        var savedUser = localStorage.getItem('usuario');
         if (savedUser) {
             this.user = JSON.parse(savedUser);
             return this.user;
@@ -47,6 +47,12 @@ var AuthService = /** @class */ (function () {
             return true;
         }
         return false;
+    };
+    AuthService.prototype.logOut = function () {
+        this.user = null;
+        this.token = null;
+        localStorage.clear();
+        this.router.navigate(['/login']);
     };
     AuthService = __decorate([
         core_1.Injectable({

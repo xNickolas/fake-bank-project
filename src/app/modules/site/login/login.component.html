@@ -1,16 +1,26 @@
 <div class="login-container p-3 mx-auto flex-column flex-sm-row">
 
-    <form class="card-login-account p-4">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="card-login-account p-4">
         <div class="form-title ml-2">
             <h4>Faça seu login</h4>
         </div>
         <div class="form-group-input mb-4">
-            <label for="cpf">Digite seu usuário</label>
-            <input type="text">
+            <!-- <label for="cpf">Digite seu usuário</label>
+            <input type="text"> -->
+            <input
+             type="text" class="form-control"
+             placeholder="Digite seu usuário" name="user"
+             [(ngModel)]="user" required
+             [class.id-isvalid]="exibeErro('user', form)" #userInput>
         </div>
         <div class="form-group-input mb-4">
-            <label for="cpf">Digite sua senha</label>
-            <input type="password">
+            <!-- <label for="cpf">Digite sua senha</label>
+            <input type="password"> -->
+            <input
+            type="password" class="form-control"
+            placeholder="Digite sua senha" name="password"
+            [(ngModel)]="password" required
+            [class.id-isvalid]="exibeErro('password', form)" #passwordInput>
         </div>
         <div class="btn-loader mt-4 mb-5">
             <button type="submit" class="form-btn ml-2">

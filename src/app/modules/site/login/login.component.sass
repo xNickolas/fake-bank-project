@@ -1,28 +1,33 @@
-
 @import 'src/sass/colors'
+@import 'src/sass/form'
 @import 'src/sass/display'
 
 .login-container 
-  background-repeat: no-repeat
-  background-position: center bottom
   background-color: $purple
   min-height: 100vh
   display: flex
-  flex-direction: column
   margin: 0
+  justify-content: center
   align-items: center
-  justify-content: space-around
+
+.card-login-account
+  width: 455px
+  height: 422px
+  text-align: center
+  background-color: $white-light
+  border-radius: 8px
 
 .form-group-input
-  border: 1px
+  text-align: left
+  background: transparent
   display: flex
   flex-direction: column
   
 .form-title
   font-style: normal
-  font-weight: 500
-  font-size: 19px
-  line-height: 22px
+  font-weight: bold
+  font-size: 20px
+  line-height: 23px
   display: flex
   flex-direction: column
   align-items: left
@@ -35,7 +40,7 @@
   margin: 1rem
 
 .form-btn
-  width: 90%
+  width: 95%
   height: 47.66px
   padding: 0px 15px 0px 15px
   background: #68DE5A
@@ -45,17 +50,29 @@
   border: none
 
 .form-btn, text
-  color: #FBFBFB 
+  color: $white
   font-style: normal
   font-weight: 500
-  font-size: 15px
-  line-height: 20px
+  font-size: 16px
+  line-height: 19px
   display: flex
   align-items: center
 
-.cads-accounts
-  border-radius: 8px
-  display: center
+.btn-links
+  display: flex
+  flex-direction: column
   align-items: center
+  justify-content: center
+
+.btn-links, a
+  color: $purple
+  font-style: normal
+  font-weight: 500
+  font-size: 15px
+  line-height: 17px
+  display: flex
+  align-items: center
+
+
 
 

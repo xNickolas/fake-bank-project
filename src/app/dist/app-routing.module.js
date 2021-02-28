@@ -11,7 +11,8 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var routes = [
     { path: '', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); } },
-    { path: 'dashboard', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/dashboard/dashboard.module'); }).then(function (m) { return m.DashboardModule; }); } }
+    { path: 'dashboard', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/dashboard/dashboard.module'); }).then(function (m) { return m.DashboardModule; }); } },
+    { path: 'login', loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/login/login.module'); }).then(function (m) { return m.LoginModule; }); } }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

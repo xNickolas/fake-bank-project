@@ -6,24 +6,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.SiteRoutingModule = void 0;
+exports.LoginModule = void 0;
+var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var login_component_1 = require("./login/login.component");
-var site_component_1 = require("./site.component");
-var routes = [
-    { path: '', component: site_component_1.SiteComponent },
-    { path: 'login', component: login_component_1.LoginComponent },
-];
-var SiteRoutingModule = /** @class */ (function () {
-    function SiteRoutingModule() {
+var login_routing_module_1 = require("./login-routing.module");
+var login_component_1 = require("./login.component");
+var LoginModule = /** @class */ (function () {
+    function LoginModule() {
     }
-    SiteRoutingModule = __decorate([
+    LoginModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forChild(routes)],
-            exports: [router_1.RouterModule]
+            declarations: [
+                login_component_1.LoginComponent,
+            ],
+            imports: [
+                common_1.CommonModule,
+                login_routing_module_1.LoginRoutingModule
+            ],
+            exports: [
+                login_component_1.LoginComponent,
+            ]
         })
-    ], SiteRoutingModule);
-    return SiteRoutingModule;
+    ], LoginModule);
+    return LoginModule;
 }());
-exports.SiteRoutingModule = SiteRoutingModule;
+exports.LoginModule = LoginModule;

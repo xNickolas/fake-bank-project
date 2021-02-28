@@ -11,7 +11,8 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
-var site_component_1 = require("./modules/site/site.component");
+var dashboard_module_1 = require("./modules/dashboard/dashboard.module");
+var login_module_1 = require("./modules/site/login/login.module");
 var site_module_1 = require("./modules/site/site.module");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -20,12 +21,13 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                site_component_1.SiteComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 site_module_1.SiteModule,
+                dashboard_module_1.DashboardModule,
+                login_module_1.LoginModule,
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

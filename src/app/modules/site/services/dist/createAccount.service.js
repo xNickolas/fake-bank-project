@@ -33,3 +33,4 @@ var CreateAccountService = /** @class */ (function () {
     return CreateAccountService;
 }());
 exports.CreateAccountService = CreateAccountService;
+// https://developer.atlassian.com/server/crowd/json-requests-and-responses/

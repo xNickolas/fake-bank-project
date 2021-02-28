@@ -24,9 +24,9 @@ var LoginModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule,
                 login_routing_module_1.LoginRoutingModule,
-                dashboard_module_1.DashboardModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
+                dashboard_module_1.DashboardModule,
             ],
             exports: [
                 login_component_1.LoginComponent,

@@ -48,12 +48,6 @@ var AuthService = /** @class */ (function () {
         }
         return false;
     };
-    AuthService.prototype.logOut = function () {
-        this.user = null;
-        this.token = null;
-        localStorage.clear();
-        this.router.navigate(['/login']);
-    };
     AuthService = __decorate([
         core_1.Injectable({
             providedIn: 'root'

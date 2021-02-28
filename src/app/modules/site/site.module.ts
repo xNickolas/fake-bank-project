@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { LoginModule } from './login/login.module';
 import { AnnuityComponent } from './modules/annuity/annuity.component';
 import { ComplexityComponent } from './modules/complexity/complexity.component';
 import { CreateAccountFormComponent } from './modules/create-account-form/create-account-form.component';
@@ -25,12 +26,19 @@ import { SiteRoutingModule } from './site.routing.module';
   imports: [
     CommonModule,
     SiteRoutingModule,
+    LoginModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],
   exports: [
-    SiteComponent
+    SiteComponent,
+    HomeComponent,
+    CreateAccountFormComponent,
+    DigitalAccountComponent,
+    AnnuityComponent,
+    ComplexityComponent,
+    SimplifyLifeComponent
   ]
 })
 export class SiteModule { }

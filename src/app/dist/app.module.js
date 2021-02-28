@@ -7,13 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 exports.AppModule = void 0;
+var common_1 = require("@angular/common");
+var http_1 = require("@angular/common/http");
+var pt_1 = require("@angular/common/locales/pt");
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var dashboard_module_1 = require("./modules/dashboard/dashboard.module");
 var login_module_1 = require("./modules/site/login/login.module");
 var site_module_1 = require("./modules/site/site.module");
+common_1.registerLocaleData(pt_1["default"], 'pt');
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -28,8 +33,13 @@ var AppModule = /** @class */ (function () {
                 site_module_1.SiteModule,
                 dashboard_module_1.DashboardModule,
                 login_module_1.LoginModule,
+                http_1.HttpClientModule,
+                forms_1.ReactiveFormsModule,
             ],
-            providers: [],
+            providers: [{
+                    provide: core_1.LOCALE_ID,
+                    useValue: 'pt-BR'
+                }],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

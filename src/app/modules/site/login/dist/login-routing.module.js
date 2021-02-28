@@ -13,7 +13,8 @@ var site_component_1 = require("../site.component");
 var login_component_1 = require("./login.component");
 var routes = [
     { path: '', component: login_component_1.LoginComponent },
-    { path: '', component: site_component_1.SiteComponent },
+    { path: 'site', component: site_component_1.SiteComponent },
+    { path: 'dashboard', component: site_component_1.SiteComponent },
 ];
 var LoginRoutingModule = /** @class */ (function () {
     function LoginRoutingModule() {

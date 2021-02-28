@@ -15,10 +15,10 @@ var IsLoggedGuard = /** @class */ (function () {
     }
     IsLoggedGuard.prototype.canActivate = function () {
         var isLoggedIn = this.authService.isLogged();
-        if (isLoggedIn) {
+        if (!isLoggedIn) {
             return true;
         }
-        this.router.navigate(['/login']);
+        this.router.navigate(['/dashboard']);
         return false;
     };
     IsLoggedGuard = __decorate([

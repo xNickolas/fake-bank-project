@@ -23,9 +23,9 @@ export class LoginService {
     private router: Router,
   ) { }
 
-  logIn(user: Login): Observable<LoginResponse> {
+  logIn(usuario: Login): Observable<LoginResponse> {
     // return this.http.post(this.API_URL + '/contatos/' + id, this.httpOptions);
-      return this.http.post<LoginResponse>(this.API_URL + '/login', user)
+      return this.http.post<LoginResponse>(this.API_URL + '/login', usuario)
       .pipe(
         delay(1000),
         tap( response => {

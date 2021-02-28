@@ -11,6 +11,7 @@ var common_1 = require("@angular/common");
 var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
+var login_module_1 = require("./login/login.module");
 var annuity_component_1 = require("./modules/annuity/annuity.component");
 var complexity_component_1 = require("./modules/complexity/complexity.component");
 var create_account_form_component_1 = require("./modules/create-account-form/create-account-form.component");
@@ -36,12 +37,19 @@ var SiteModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule,
                 site_routing_module_1.SiteRoutingModule,
+                login_module_1.LoginModule,
                 http_1.HttpClientModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule
             ],
             exports: [
-                site_component_1.SiteComponent
+                site_component_1.SiteComponent,
+                home_component_1.HomeComponent,
+                create_account_form_component_1.CreateAccountFormComponent,
+                digital_account_component_1.DigitalAccountComponent,
+                annuity_component_1.AnnuityComponent,
+                complexity_component_1.ComplexityComponent,
+                simplify_life_component_1.SimplifyLifeComponent
             ]
         })
     ], SiteModule);

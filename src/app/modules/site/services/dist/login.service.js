@@ -17,10 +17,10 @@ var LoginService = /** @class */ (function () {
         this.router = router;
         this.API_URL = environment_1.environment.API_URL;
     }
-    LoginService.prototype.logIn = function (user) {
+    LoginService.prototype.logIn = function (usuario) {
         var _this = this;
         // return this.http.post(this.API_URL + '/contatos/' + id, this.httpOptions);
-        return this.http.post(this.API_URL + '/login', user)
+        return this.http.post(this.API_URL + '/login', usuario)
             .pipe(operators_1.delay(1000), operators_1.tap(function (response) {
             _this.authService.setUser(response.user);
             _this.authService.setToken(response.token);

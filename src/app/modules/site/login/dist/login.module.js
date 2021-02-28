@@ -9,6 +9,7 @@ exports.__esModule = true;
 exports.LoginModule = void 0;
 var common_1 = require("@angular/common");
 var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
 var login_routing_module_1 = require("./login-routing.module");
 var login_component_1 = require("./login.component");
 var LoginModule = /** @class */ (function () {
@@ -21,7 +22,9 @@ var LoginModule = /** @class */ (function () {
             ],
             imports: [
                 common_1.CommonModule,
-                login_routing_module_1.LoginRoutingModule
+                login_routing_module_1.LoginRoutingModule,
+                forms_1.FormsModule,
+                forms_1.ReactiveFormsModule,
             ],
             exports: [
                 login_component_1.LoginComponent,

@@ -1,19 +1,19 @@
 <div class="login-container p-3 mx-auto flex-column flex-sm-row">
 
-    <form class="card-login-account p-4">
+    <form class="card-login-account p-4" [formGroup]="login" (ngSubmit)="onSubmit()">
         <div class="form-title ml-2">
             <h4>Faça seu login</h4>
         </div>
         <div class="form-group-input mb-4">
-            <label for="cpf">Digite seu usuário</label>
-            <input type="text">
+            <label for="user">Digite seu usuário</label>
+            <input type="text" name="user" formControlName="user">
         </div>
         <div class="form-group-input mb-4">
-            <label for="cpf">Digite sua senha</label>
-            <input type="password">
+            <label for="password">Digite sua senha</label>
+            <input type="password" name="password" formControlName="password">
         </div>
         <div class="btn-loader mt-4 mb-5">
-            <button type="submit" class="form-btn ml-2">
+            <button type="submit" class="form-btn ml-2" [disabled]="login.invalid">
                 Enviar
                 <img src="assets/icons/white-arrow.svg">
             </button>

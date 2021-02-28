@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { take } from 'rxjs/operators';
+
+import { AuthService } from '../../shared/services/auth/auth.service';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +13,52 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  login: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private loginService: LoginService,
+    private router: Router,
+  ) { }
+
 
   ngOnInit(): void {
+    this.loginForm();
+  }
+
+  loginForm() {
+    this.login = this.fb.group({
+      user: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
+
+  onSubmit(){
+    if (!this.login.valid) {
+      return;
+    }
+    this.logIn();
+  }
+
+
+  logIn() {
+    this.loginService.logIn(this.login.value)
+    .pipe(
+      take(1),
+    )
+    .subscribe(
+      response => this.onSucessLogin(),
+      error => this.onError(error),
+    );
+  }
+
+  onSucessLogin() {
+    this.router.navigate(['/dashboard']);
+  }
+
+  onError(error: any){
+    console.log(error);
   }
 
 }

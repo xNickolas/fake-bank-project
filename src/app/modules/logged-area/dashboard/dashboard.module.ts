@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { AccountComponent } from './components/account/account.component';
 import { CreditAccountComponent } from './components/credit-account/credit-account.component';
 import { LatestStatementsComponent } from './components/latest-statements/latest-statements.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { DepositsComponent } from './pages/deposits/deposits.component';
 import { PlansComponent } from './pages/plans/plans.component';
+import { HomeDashboardComponent } from './components/home-dashboard/home-dashboard.component';
+import { HeaderDashboardComponent } from './components/header-dashboard/header-dashboard.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { PlansComponent } from './pages/plans/plans.component';
     LatestStatementsComponent,
     DepositsComponent,
     PlansComponent,
+    HomeDashboardComponent,
   ],
   imports: [
     CommonModule,

@@ -5,7 +5,7 @@ import { User } from '../../site/interfaces/createAccount.interface';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
+  template: '<app-home-dashboard></app-home-dashboard>',
   styleUrls: ['./dashboard.component.sass']
 })
 export class DashboardComponent implements OnInit {

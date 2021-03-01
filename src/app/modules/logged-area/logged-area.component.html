@@ -2,7 +2,9 @@
     <div class="sidebar">
         <app-sidebar></app-sidebar>
     </div>
-    <div  class="router-outlet">
-        <router-outlet></router-outlet>
+    <div class=" dashboard-container router-outlet">
+        <app-header-dashboard></app-header-dashboard>
+        <router-outlet class="cards-wrapper "></router-outlet>
     </div>
+
 </div>

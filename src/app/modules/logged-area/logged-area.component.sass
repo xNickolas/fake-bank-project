@@ -1,0 +1,23 @@
+
+@import 'src/sass/display'
+@import 'src/sass/colors'
+
+
+.logged-area-container
+  min-height: 100vh
+  width: 100%
+  margin: 0
+  display: flex
+  flex-direction: row
+  background-color: $purple
+
+.router-outlet
+    width: 100%
+
+
+@media screen and (max-width: $screen-sm-min) 
+    .logged-area-container
+        padding-bottom: 8rem
+
+    .sidebar
+        height: 100%

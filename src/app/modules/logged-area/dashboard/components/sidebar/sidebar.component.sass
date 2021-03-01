@@ -49,15 +49,16 @@
   display: inline-block
   justify-content: space-between
 
-
-
-
 @media screen and (max-width: $screen-lg-min) 
   #sidenav-main 
     max-width: 100%
     height: auto
     flex-direction: row
     overflow-y: scroll
+    position: fixed
+    display: flex
+    bottom: 0
+    justify-content: space-between
 
   .sidebar-column
     flex-direction: row

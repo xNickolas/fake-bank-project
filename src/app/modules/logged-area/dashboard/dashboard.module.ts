@@ -15,7 +15,6 @@ import { PlansComponent } from './pages/plans/plans.component';
 @NgModule({
   declarations: [
     DashboardComponent,
-    SidebarComponent,
     AccountComponent,
     CreditAccountComponent,
     LatestStatementsComponent,

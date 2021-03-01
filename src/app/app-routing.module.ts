@@ -22,6 +22,7 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent,
+    canActivate: [NotLoggedGuard],
   },
   {
     path: 'error',

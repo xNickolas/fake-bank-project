@@ -21,6 +21,7 @@ export class ForgotPasswordComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.validateForgotPassword();
   }
 
   validateForgotPassword(){

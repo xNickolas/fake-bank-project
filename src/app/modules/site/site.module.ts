@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 import { AnnuityComponent } from './modules/annuity/annuity.component';
 import { ComplexityComponent } from './modules/complexity/complexity.component';
@@ -20,7 +21,8 @@ import { SiteRoutingModule } from './site.routing.module';
       DigitalAccountComponent,
       AnnuityComponent,
       ComplexityComponent,
-      SimplifyLifeComponent
+      SimplifyLifeComponent,
+      ForgotPasswordComponent,
   ],
   imports: [
     CommonModule,
@@ -38,7 +40,7 @@ import { SiteRoutingModule } from './site.routing.module';
     AnnuityComponent,
     ComplexityComponent,
     SimplifyLifeComponent,
-    ReactiveFormsModule
+    ForgotPasswordComponent,
   ]
 })
 export class SiteModule { }

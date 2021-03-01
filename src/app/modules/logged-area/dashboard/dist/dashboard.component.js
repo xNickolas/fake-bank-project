@@ -11,12 +11,16 @@ var core_1 = require("@angular/core");
 var DashboardComponent = /** @class */ (function () {
     function DashboardComponent(authService) {
         this.authService = authService;
-        this.nameUser = 'Usuário';
+        this.show = true;
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        this.user = this.authService.getUser();
     };
     DashboardComponent.prototype.logout = function () {
         this.authService.logOut();
+    };
+    DashboardComponent.prototype.btnHide = function () {
+        this.show = !this.show;
     };
     DashboardComponent = __decorate([
         core_1.Component({

@@ -10,9 +10,16 @@ exports.DashboardRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var dashboard_component_1 = require("./dashboard.component");
+var plans_component_1 = require("./pages/plans/plans.component");
 var routes = [
     {
-        path: '', component: dashboard_component_1.DashboardComponent
+        path: '', component: dashboard_component_1.DashboardComponent,
+        children: [
+            {
+                path: 'plans',
+                component: plans_component_1.PlansComponent
+            },
+        ]
     }
 ];
 var DashboardRoutingModule = /** @class */ (function () {

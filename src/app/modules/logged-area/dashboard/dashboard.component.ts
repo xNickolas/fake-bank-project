@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from '../../shared/services/auth/auth.service';
+import { User } from '../../site/interfaces/createAccount.interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,17 +10,23 @@ import { AuthService } from '../../shared/services/auth/auth.service';
 })
 export class DashboardComponent implements OnInit {
 
-  nameUser = 'Usuário';
+  show = true;
+  user: User;
 
   constructor(
     private authService: AuthService,
   ) { }
 
   ngOnInit(): void {
+    this.user = this.authService.getUser();
   }
 
   logout() {
     this.authService.logOut();
+  }
+
+  btnHide() {
+    this.show = !this.show;
   }
 
 }

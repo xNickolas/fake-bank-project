@@ -1,27 +1,28 @@
 # FakeBank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
+> fake Bank é um projeto desenvolvido pelo Grupo Angulado!
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Pré-requisitos
 
-## Code scaffolding
+Para utilizar esse projeto você precisa de:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Plugin | Versão |
+| ------ | ------ |
+| Node.js | v14.15.5 |
+| Npm | v6.14.11 |
+| Angular cli | v11 |
+| Typescrit | v4.2 |
 
-## Build
+## Instalação e rodando projeto localmente
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+> Dentro da página fake-bank
 
-## Running unit tests
+```sh
+npm install
+ng serve 
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Link do projeto
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> https://fakebank.netlify.app/

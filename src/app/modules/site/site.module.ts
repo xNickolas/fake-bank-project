@@ -37,7 +37,8 @@ import { SiteRoutingModule } from './site.routing.module';
     DigitalAccountComponent,
     AnnuityComponent,
     ComplexityComponent,
-    SimplifyLifeComponent
+    SimplifyLifeComponent,
+    ReactiveFormsModule
   ]
 })
 export class SiteModule { }

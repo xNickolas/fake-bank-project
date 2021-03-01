@@ -11,6 +11,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var is_logged_guard_1 = require("./modules/shared/guards/is-logged/is-logged.guard");
 var not_logged_guard_1 = require("./modules/shared/guards/not-logged/not-logged.guard");
+var forgot_password_component_1 = require("./modules/site/forgot-password/forgot-password.component");
 var routes = [
     {
         path: '#',
@@ -25,6 +26,10 @@ var routes = [
         path: 'login',
         loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/login/login.module'); }).then(function (m) { return m.LoginModule; }); },
         canActivate: [not_logged_guard_1.NotLoggedGuard]
+    },
+    {
+        path: 'forgot-password',
+        component: forgot_password_component_1.ForgotPasswordComponent
     },
     {
         path: 'error',

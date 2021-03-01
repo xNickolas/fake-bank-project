@@ -63,6 +63,10 @@ export class AuthService {
     // return false;
   }
 
+  getNewPassword(){
+    return localStorage.getItem('senhaTemporaria');
+  }
+
   logOut() {
     this.user = null;
     this.token = null;

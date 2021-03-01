@@ -49,6 +49,9 @@ var AuthService = /** @class */ (function () {
         // }
         // return false;
     };
+    AuthService.prototype.getNewPassword = function () {
+        return localStorage.getItem('senhaTemporaria');
+    };
     AuthService.prototype.logOut = function () {
         this.user = null;
         this.token = null;

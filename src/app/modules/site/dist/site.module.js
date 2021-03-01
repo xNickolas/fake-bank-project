@@ -48,7 +48,8 @@ var SiteModule = /** @class */ (function () {
                 digital_account_component_1.DigitalAccountComponent,
                 annuity_component_1.AnnuityComponent,
                 complexity_component_1.ComplexityComponent,
-                simplify_life_component_1.SimplifyLifeComponent
+                simplify_life_component_1.SimplifyLifeComponent,
+                forms_1.ReactiveFormsModule
             ]
         })
     ], SiteModule);

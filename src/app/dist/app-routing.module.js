@@ -12,6 +12,7 @@ var router_1 = require("@angular/router");
 var is_logged_guard_1 = require("./modules/shared/guards/is-logged/is-logged.guard");
 var not_logged_guard_1 = require("./modules/shared/guards/not-logged/not-logged.guard");
 var forgot_password_component_1 = require("./modules/site/forgot-password/forgot-password.component");
+var request_new_password_component_1 = require("./modules/site/request-new-password/request-new-password.component");
 var routes = [
     {
         path: '#',
@@ -30,6 +31,10 @@ var routes = [
     {
         path: 'forgot-password',
         component: forgot_password_component_1.ForgotPasswordComponent
+    },
+    {
+        path: 'request-new-password',
+        component: request_new_password_component_1.RequestNewPasswordComponent
     },
     {
         path: 'error',

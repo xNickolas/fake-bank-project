@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { IsLoggedGuard } from './modules/shared/guards/is-logged/is-logged.guard';
 import { NotLoggedGuard } from './modules/shared/guards/not-logged/not-logged.guard';
 import { ForgotPasswordComponent } from './modules/site/forgot-password/forgot-password.component';
+import { RequestNewPasswordComponent } from './modules/site/request-new-password/request-new-password.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,11 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     component: ForgotPasswordComponent,
-    canActivate: [NotLoggedGuard],
+    // canActivate: [NotLoggedGuard],
+  },
+  {
+    path: 'request-new-password',
+    component: RequestNewPasswordComponent,
   },
   {
     path: 'error',

@@ -26,6 +26,10 @@ var routes = [
         loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/login/login.module'); }).then(function (m) { return m.LoginModule; }); },
         canActivate: [not_logged_guard_1.NotLoggedGuard]
     },
+    {
+        path: 'error',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/page-error/page-error.module'); }).then(function (m) { return m.PageErrorModule; }); }
+    },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

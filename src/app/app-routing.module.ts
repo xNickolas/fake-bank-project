@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/site/login/login.module').then(m => m.LoginModule),
     canActivate: [NotLoggedGuard],
   },
+  {
+    path: 'error',
+    loadChildren: () => import('./modules/site/page-error/page-error.module').then(m => m.PageErrorModule)
+  },
 ];
 
 @NgModule({

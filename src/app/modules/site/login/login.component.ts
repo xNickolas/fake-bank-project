@@ -49,14 +49,16 @@ export class LoginComponent implements OnInit {
     )
     .subscribe(
       response => this.onSucessLogin(),
-      error => {
-        console.log(error);
-      }
+      error => this.onError(error),
     );
   }
 
   onSucessLogin() {
     this.router.navigate(['/#/dashboard']);
+  }
+
+  onError(error: any) {
+    this.router.navigate(['/error']);
   }
 
 }

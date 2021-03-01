@@ -9,10 +9,14 @@ exports.__esModule = true;
 exports.DashboardComponent = void 0;
 var core_1 = require("@angular/core");
 var DashboardComponent = /** @class */ (function () {
+    // hiddenCard = false;
     function DashboardComponent(authService) {
         this.authService = authService;
         this.show = true;
     }
+    // btnHide() {
+    //   this.hiddenCard = true;
+    // }
     DashboardComponent.prototype.ngOnInit = function () {
         this.user = this.authService.getUser();
     };

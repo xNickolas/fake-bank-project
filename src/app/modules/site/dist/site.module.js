@@ -11,12 +11,14 @@ var common_1 = require("@angular/common");
 var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
+var forgot_password_component_1 = require("./forgot-password/forgot-password.component");
 var annuity_component_1 = require("./modules/annuity/annuity.component");
 var complexity_component_1 = require("./modules/complexity/complexity.component");
 var create_account_form_component_1 = require("./modules/create-account-form/create-account-form.component");
 var digital_account_component_1 = require("./modules/digital-account/digital-account.component");
 var home_component_1 = require("./modules/home/home.component");
 var simplify_life_component_1 = require("./modules/simplify-life/simplify-life.component");
+var request_new_password_component_1 = require("./request-new-password/request-new-password.component");
 var site_component_1 = require("./site.component");
 var site_routing_module_1 = require("./site.routing.module");
 var SiteModule = /** @class */ (function () {
@@ -31,7 +33,9 @@ var SiteModule = /** @class */ (function () {
                 digital_account_component_1.DigitalAccountComponent,
                 annuity_component_1.AnnuityComponent,
                 complexity_component_1.ComplexityComponent,
-                simplify_life_component_1.SimplifyLifeComponent
+                simplify_life_component_1.SimplifyLifeComponent,
+                forgot_password_component_1.ForgotPasswordComponent,
+                request_new_password_component_1.RequestNewPasswordComponent
             ],
             imports: [
                 common_1.CommonModule,
@@ -49,7 +53,8 @@ var SiteModule = /** @class */ (function () {
                 annuity_component_1.AnnuityComponent,
                 complexity_component_1.ComplexityComponent,
                 simplify_life_component_1.SimplifyLifeComponent,
-                forms_1.ReactiveFormsModule
+                forgot_password_component_1.ForgotPasswordComponent,
+                request_new_password_component_1.RequestNewPasswordComponent
             ]
         })
     ], SiteModule);

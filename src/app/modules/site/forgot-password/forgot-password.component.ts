@@ -43,14 +43,16 @@ export class ForgotPasswordComponent implements OnInit {
     )
     .subscribe(
       response => this.onSucessPassword(),
-      error => {
-        console.log(error);
-      }
+      error => this.onError(error),
     );
   }
 
   onSucessPassword() {
     this.router.navigate(['/login']);
+  }
+
+  onError(error: any) {
+    this.router.navigate(['/error']);
   }
 
   onSubmit(){

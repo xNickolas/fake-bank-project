@@ -13,9 +13,15 @@ export class DashboardComponent implements OnInit {
   show = true;
   user: User;
 
+  // hiddenCard = false;
+
   constructor(
     private authService: AuthService,
   ) { }
+
+  // btnHide() {
+  //   this.hiddenCard = true;
+  // }
 
   ngOnInit(): void {
     this.user = this.authService.getUser();

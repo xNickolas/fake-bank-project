@@ -17,6 +17,7 @@ var ForgotPasswordComponent = /** @class */ (function () {
         this.fb = fb;
     }
     ForgotPasswordComponent.prototype.ngOnInit = function () {
+        this.validateForgotPassword();
     };
     ForgotPasswordComponent.prototype.validateForgotPassword = function () {
         this.forgotPasswordForm = this.fb.group({
@@ -33,12 +34,13 @@ var ForgotPasswordComponent = /** @class */ (function () {
         };
         this.forgotPassword.changePassword(user)
             .pipe(operators_1.take(1))
-            .subscribe(function (response) { return _this.onSucessPassword(); }, function (error) {
-            console.log(error);
-        });
+            .subscribe(function (response) { return _this.onSucessPassword(); }, function (error) { return _this.onError(error); });
     };
     ForgotPasswordComponent.prototype.onSucessPassword = function () {
         this.router.navigate(['/login']);
+    };
+    ForgotPasswordComponent.prototype.onError = function (error) {
+        this.router.navigate(['/error']);
     };
     ForgotPasswordComponent.prototype.onSubmit = function () {
         if (!this.forgotPasswordForm.valid || this.forgotPasswordForm.value.novaSenha !== this.forgotPasswordForm.value.confirmaSenha) {

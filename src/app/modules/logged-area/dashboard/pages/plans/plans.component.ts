@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { Plans } from 'src/app/modules/site/interfaces/plans.interface';
+
+import { PlanService } from './plans.service';
 
 @Component({
   selector: 'app-plans',
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlansComponent implements OnInit {
 
-  constructor() { }
+  plans: Plans[];
+
+  constructor(
+    private plansService: PlanService,
+  ) { }
 
   ngOnInit(): void {
+    this.loadPlans();
+  }
+
+  loadPlans() {
+    this.plansService.getPlans()
+    .pipe(
+      take(1),
+    )
+    .subscribe(
+      response => this.onSucessPlans(response)
+    );
+  }
+
+  onSucessPlans(response: Plans[]) {
+    this.plans = response;
   }
 
 }

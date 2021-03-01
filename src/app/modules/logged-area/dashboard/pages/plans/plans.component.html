@@ -1,1 +1,7 @@
-<p>plans works!</p>
+<div class="card-plans-container mt-4">
+  <div class="card-plan" *ngFor="let plan of plans">
+    <p class="card-plan-title">{{ plan.descricao}}</p>
+    <p class="card-plan-user">{{ plan.login }}</p>
+    <p class="card-plan-discription">Movimentação do tipo: {{ plan.tipoMovimento}}</p>
+  </div>
+</div>

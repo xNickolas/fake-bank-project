@@ -9,12 +9,25 @@ exports.__esModule = true;
 exports.DashboardRoutingModule = void 0;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var dashboard_component_1 = require("./dashboard.component");
+var header_dashboard_component_1 = require("./components/header-dashboard/header-dashboard.component");
+var home_dashboard_component_1 = require("./components/home-dashboard/home-dashboard.component");
+var deposits_component_1 = require("./pages/deposits/deposits.component");
 var plans_component_1 = require("./pages/plans/plans.component");
 var routes = [
+    // {
+    //   path: '', component: AccountComponent,
+    // },
     {
-        path: '', component: dashboard_component_1.DashboardComponent,
+        path: '', component: header_dashboard_component_1.HeaderDashboardComponent,
         children: [
+            {
+                path: 'home',
+                component: home_dashboard_component_1.HomeDashboardComponent
+            },
+            {
+                path: 'deposits',
+                component: deposits_component_1.DepositsComponent
+            },
             {
                 path: 'plans',
                 component: plans_component_1.PlansComponent

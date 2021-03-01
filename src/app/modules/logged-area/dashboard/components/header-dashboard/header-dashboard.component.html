@@ -1,15 +1,27 @@
-<div class="welcome-user">
-    <p class="welcome-user-text">Olá {{ user.nome }}, seja bem vindo! </p>
-
-    <div class="feature-buttons">
-      <div class="btn-hidden btn-feature">
-        <img src="assets/icons/eye-hidden.svg" title="Ocultar" (click)="btnHide()">
-      </div>
-      <div class="btn-reload btn-feature">
-        <img src="assets/icons/refresh.svg" title="Recarregar">
-      </div>
-      <div class="btn-sign-out btn-feature">
-        <img src="assets/icons/exit.svg" title="Sair" (click)="logout()">
+<div class="logged-area-container">
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="logged-area-main-page p-5">
+    <div class="welcome-user">
+      <p class="welcome-user-text">Olá {{ user.nome }}, seja bem vindo! </p>
+  
+      <div class="feature-buttons">
+        <div class="btn-hidden btn-feature">
+          <img src="assets/icons/eye-hidden.svg" title="Ocultar" (click)="btnHide()">
+        </div>
+        <div class="btn-reload btn-feature">
+          <img src="assets/icons/refresh.svg" title="Recarregar">
+        </div>
+        <div class="btn-sign-out btn-feature">
+          <img src="assets/icons/exit.svg" title="Sair" (click)="logout()">
+        </div>
       </div>
     </div>
+    <div class=" dashboard-container router-outlet">
+        <router-outlet class="cards-wrapper"></router-outlet>
+        <!-- PODE TROCAR PELO COMPONENTE CORRETO-->
+        <!--EXEMPLO O HOME-DASHBOARD-COMPONENT-->
+    </div>
   </div>
+</div>

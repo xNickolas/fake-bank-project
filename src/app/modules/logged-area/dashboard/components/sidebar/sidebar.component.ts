@@ -15,10 +15,9 @@ export class SidebarComponent implements OnInit {
   }
 
   onClick(option: number){
-    if(option===1){
-      this.router.navigate(['/#/dashboard/deposits/']);
+    if (option === 1 ) {
+      this.router.navigate(['/#/dashboard/deposits']);
     }
-    
   }
 
 }

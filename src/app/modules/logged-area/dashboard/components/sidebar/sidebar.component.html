@@ -4,6 +4,12 @@
     </a>
 
     <div class="sidebar-column">
+      <div class="card-nav-body p-2" routerLink="/#/dashboard/home">
+        <p class="text-card text-sm">
+          <img src="assets/icons/pix.svg" class="icon-pix mt-2 mb-3 mr-3">
+          <span class="text-nowrap">Home</span>
+        </p>
+      </div>
       <div class="card-nav-body p-2" >
         <!--<div routerLink="depositos" routerLinkActive="ativado" class="card-nav-body mt-4 p-2" [class.active]='selected'>-->
       <p class="text-card text-sm" (click)='onClick(1)'>
@@ -11,7 +17,7 @@
           <span class="text-nowrap">Depósitos</span>
         </p>
       </div>
-      <div class="card-nav-body p-2" (click)='onClick(2)'>
+      <div class="card-nav-body p-2" routerLink="/#/dashboard/plans">
         <p class="text-card text-sm">
           <img src="assets/icons/pix.svg" class="icon-pix mt-2 mb-3 mr-2">
           <span class="text-nowrap">Planos</span>

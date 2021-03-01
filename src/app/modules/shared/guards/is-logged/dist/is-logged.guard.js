@@ -14,11 +14,11 @@ var IsLoggedGuard = /** @class */ (function () {
         this.router = router;
     }
     IsLoggedGuard.prototype.canActivate = function () {
-        var isLoggedIn = this.authService.isLogged();
-        if (!isLoggedIn) {
+        // const isLoggedIn = this.authService.isLogged();
+        if (this.authService.isLogged()) {
             return true;
         }
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/login']);
         return false;
     };
     IsLoggedGuard = __decorate([

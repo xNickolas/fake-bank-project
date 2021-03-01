@@ -16,10 +16,9 @@ var NotLoggedGuard = /** @class */ (function () {
     NotLoggedGuard.prototype.canActivate = function () {
         var isLoggedIn = this.authService.isLogged();
         if (isLoggedIn) {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/#']);
             return false;
         }
-        this.router.navigate(['/home']);
         return true;
     };
     NotLoggedGuard = __decorate([

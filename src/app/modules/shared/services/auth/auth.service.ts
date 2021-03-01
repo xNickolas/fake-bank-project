@@ -34,7 +34,7 @@ export class AuthService {
     return null;
   }
 
-  setToken(token: string) {
+  setToken(token: any) {
     this.token = token;
     localStorage.setItem('token', token);
   }
@@ -55,11 +55,12 @@ export class AuthService {
   }
 
   isLogged(): boolean {
-    if (this.getUser() && this.getToken()) {
-      return true;
-    }
+    return this.getUser() && this.getToken() ? true : false;
+    // if (this.getUser() && this.getToken()) {
+    //   return true;
+    // }
 
-    return false;
+    // return false;
   }
 
   logOut() {

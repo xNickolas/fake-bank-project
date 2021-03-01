@@ -17,11 +17,9 @@ export class NotLoggedGuard implements CanActivate {
     const isLoggedIn = this.authService.isLogged();
 
     if (isLoggedIn) {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/#']);
       return false;
     }
-
-    this.router.navigate(['/home']);
     return true;
   }
 

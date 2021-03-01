@@ -43,10 +43,11 @@ var AuthService = /** @class */ (function () {
         return null;
     };
     AuthService.prototype.isLogged = function () {
-        if (this.getUser() && this.getToken()) {
-            return true;
-        }
-        return false;
+        return this.getUser() && this.getToken() ? true : false;
+        // if (this.getUser() && this.getToken()) {
+        //   return true;
+        // }
+        // return false;
     };
     AuthService.prototype.logOut = function () {
         this.user = null;

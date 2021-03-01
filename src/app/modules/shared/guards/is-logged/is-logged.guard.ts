@@ -14,13 +14,13 @@ export class IsLoggedGuard implements CanActivate {
   ) {}
 
   canActivate(): boolean  {
-    const isLoggedIn = this.authService.isLogged();
+    // const isLoggedIn = this.authService.isLogged();
 
-    if (!isLoggedIn) {
+    if (this.authService.isLogged()) {
       return true;
     }
 
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/login']);
     return false;
   }
 

@@ -20,7 +20,7 @@ var LoginService = /** @class */ (function () {
         var _this = this;
         // return this.http.post(this.API_URL + '/contatos/' + id, this.httpOptions);
         return this.http.post(this.API_URL + "/login", usuario)
-            .pipe(operators_1.delay(1000), operators_1.tap(function (response) {
+            .pipe(operators_1.tap(function (response) {
             _this.authService.setUser(response.usuario);
             _this.authService.setToken(response.token);
         }));

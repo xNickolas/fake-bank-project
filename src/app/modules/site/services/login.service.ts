@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { delay, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 import { AuthService } from '../../shared/services/auth/auth.service';
@@ -25,8 +25,7 @@ export class LoginService {
     // return this.http.post(this.API_URL + '/contatos/' + id, this.httpOptions);
       return this.http.post<LoginResponse>(`${this.API_URL}/login`, usuario)
       .pipe(
-        delay(1000),
-        tap( response => {
+        tap((response) => {
           this.authService.setUser(response.usuario);
           this.authService.setToken(response.token);
         })

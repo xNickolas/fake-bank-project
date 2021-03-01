@@ -9,10 +9,14 @@ exports.__esModule = true;
 exports.DashboardComponent = void 0;
 var core_1 = require("@angular/core");
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent() {
+    function DashboardComponent(authService) {
+        this.authService = authService;
         this.nameUser = 'Usuário';
     }
     DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent.prototype.logout = function () {
+        this.authService.logOut();
     };
     DashboardComponent = __decorate([
         core_1.Component({

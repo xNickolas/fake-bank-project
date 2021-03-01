@@ -41,7 +41,7 @@ var LoginComponent = /** @class */ (function () {
         });
     };
     LoginComponent.prototype.onSucessLogin = function () {
-        this.router.navigate(['/#/dashboard/']);
+        this.router.navigate(['/#/dashboard']);
     };
     LoginComponent = __decorate([
         core_1.Component({

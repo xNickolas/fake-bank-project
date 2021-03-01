@@ -13,13 +13,13 @@ var is_logged_guard_1 = require("./modules/shared/guards/is-logged/is-logged.gua
 var not_logged_guard_1 = require("./modules/shared/guards/not-logged/not-logged.guard");
 var routes = [
     {
-        path: '',
-        loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); }
-    },
-    {
         path: '#',
         loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/logged-area/logged-area.module'); }).then(function (m) { return m.LoggedAreaModule; }); },
         canActivate: [is_logged_guard_1.IsLoggedGuard]
+    },
+    {
+        path: '',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./modules/site/site.module'); }).then(function (m) { return m.SiteModule; }); }
     },
     {
         path: 'login',

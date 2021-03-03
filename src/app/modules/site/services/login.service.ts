@@ -28,6 +28,8 @@ export class LoginService {
         tap((response) => {
           this.authService.setUser(response.usuario);
           this.authService.setToken(response.token);
+          this.authService.setContaBanco(response.conta);
+          this.authService.setContaCredito(response.contaCredito);
         })
       );
   }

@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/modules/site/interfaces/createAccount.interface';
 
+import { ContaBanco } from './../../../logged-area/interfaces/contaBanco.interface';
+import { ContaCredito } from './../../../logged-area/interfaces/contaCredito.interface';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -10,13 +13,16 @@ export class AuthService {
   user: User;
   token: string;
 
+  contaBanco: ContaBanco;
+  contaCredito: ContaCredito;
+
   constructor(
     private router: Router,
   ) { }
 
   setUser(user: User){
     this.user = user;
-    localStorage.setItem('usurario', JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(user));
   }
 
   getUser() {
@@ -24,7 +30,7 @@ export class AuthService {
       return this.user;
     }
 
-    const savedUser = localStorage.getItem('usuario');
+    const savedUser = localStorage.getItem('user');
 
     if (savedUser) {
       this.user = JSON.parse(savedUser);
@@ -73,4 +79,50 @@ export class AuthService {
     localStorage.clear();
     this.router.navigate(['/login']);
   }
+
+
+
+  setContaBanco(contaBanco: ContaBanco) {
+    this.contaBanco = contaBanco;
+    localStorage.setItem('contaBanco', JSON.stringify(contaBanco));
+  }
+
+  getContaBanco() {
+    if (this.contaBanco) {
+      return this.contaBanco;
+    }
+
+    const savedAccount = localStorage.getItem('contaBanco');
+
+    if (savedAccount) {
+      this.contaBanco = JSON.parse(savedAccount);
+      return this.contaBanco;
+    }
+    return null;
+  }
+
+  setContaCredito(contaCredito: ContaCredito){
+    this.contaCredito = contaCredito;
+    localStorage.setItem('contaCredito', JSON.stringify(contaCredito));
+  }
+
+  getContaCredito() {
+    if (this.contaCredito) {
+      return this.contaCredito;
+    }
+
+    const savedAccount = localStorage.getItem('contaCredito');
+
+    if (savedAccount) {
+      this.contaCredito = JSON.parse(savedAccount);
+      return this.contaCredito;
+    }
+    return null;
+  }
+
+
+
+
+
+
 }

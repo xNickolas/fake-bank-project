@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { LancamentosResource } from '../../../interfaces/lancamentosResource.interface';
+
 
 @Component({
   selector: 'app-latest-statements',
@@ -6,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./latest-statements.component.sass']
 })
 export class LatestStatementsComponent implements OnInit {
+
+  @Input() transacoes: LancamentosResource[];
+  @Input() transacoesCredito: LancamentosResource[];
+
 
   statementeAccount = 'débito';
   statementsDiscription = 'GamaAcademy';

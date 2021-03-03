@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: '#',
     loadChildren: () => import('./modules/logged-area/logged-area.module').then(m => m.LoggedAreaModule),
-    canActivate: [IsLoggedGuard],
+    canActivate: [IsLoggedGuard]
   },
   {
     path: '', loadChildren: () => import('./modules/site/site.module').then(m => m.SiteModule)
@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./modules/site/login/login.module').then(m => m.LoginModule),
-    canActivate: [NotLoggedGuard],
+    canActivate: [NotLoggedGuard]
   },
   {
     path: 'forgot-password',

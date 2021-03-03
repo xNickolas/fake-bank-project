@@ -11,6 +11,7 @@ import { DepositsComponent } from './pages/deposits/deposits.component';
 import { PlansComponent } from './pages/plans/plans.component';
 import { HomeDashboardComponent } from './components/home-dashboard/home-dashboard.component';
 import { HeaderDashboardComponent } from './components/header-dashboard/header-dashboard.component';
+import { TransfersComponent } from './pages/transfers/transfers.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HeaderDashboardComponent } from './components/header-dashboard/header-d
     DepositsComponent,
     PlansComponent,
     HomeDashboardComponent,
+    TransfersComponent,
   ],
   imports: [
     CommonModule,

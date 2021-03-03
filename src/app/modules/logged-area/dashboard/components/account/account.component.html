@@ -6,7 +6,7 @@
 
   <div class="card-balance mb-4">
     <p class="card-title-account">Saldo disponível</p>
-    <p class="card-account-amount">R$ {{ totalBalance }}</p>
+    <p class="card-account-amount">{{ saldoConta | currency: 'BRL' }}</p>
   </div>
 
   <div class="card-account-details">

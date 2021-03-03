@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
-import { Plans } from 'src/app/modules/site/interfaces/plans.interface';
+import { Plans } from 'src/app/modules/logged-area/interfaces/plans.interface';
 
 import { PlanService } from './plans.service';
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-account',
@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  totalBalance = '10.000,00';
-  totalTransactions = '2.120,21';
+  @Input() saldoConta: number;
+
+  // totalBalance = '10.000,00';
+  totalTransactions = '0';
 
   constructor() { }
 

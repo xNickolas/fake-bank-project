@@ -6,7 +6,7 @@
 
   <div class="card-bill  mb-4">
     <p class="card-title">Fatural atual</p>
-    <p class="card-acc-amount">R$ {{ currentBill }}</p>
+    <p class="card-acc-amount">{{ saldoCredito | currency: 'BRL' }}</p>
   </div>
 
   <div class="card-credit-acc-details">

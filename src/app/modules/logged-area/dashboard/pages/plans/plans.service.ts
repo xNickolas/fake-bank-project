@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Plans } from 'src/app/modules/site/interfaces/plans.interface';
+import { Plans } from 'src/app/modules/logged-area/interfaces/plans.interface';
 import { environment } from 'src/environments/environment';
 
 import { AuthService } from './../../../../shared/services/auth/auth.service';

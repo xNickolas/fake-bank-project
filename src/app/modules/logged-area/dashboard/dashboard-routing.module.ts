@@ -5,6 +5,7 @@ import { HeaderDashboardComponent } from './components/header-dashboard/header-d
 import { HomeDashboardComponent } from './components/home-dashboard/home-dashboard.component';
 import { DepositsComponent } from './pages/deposits/deposits.component';
 import { PlansComponent } from './pages/plans/plans.component';
+import { TransfersComponent } from './pages/transfers/transfers.component';
 
 const routes: Routes = [
   // {
@@ -13,6 +14,11 @@ const routes: Routes = [
   {
     path: '', component: HeaderDashboardComponent,
     children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
       {
         path: 'home',
         component: HomeDashboardComponent,
@@ -24,6 +30,10 @@ const routes: Routes = [
       {
         path: 'plans',
         component: PlansComponent,
+      },
+      {
+        path: 'transfers',
+        component: TransfersComponent,
       },
     ]
   }

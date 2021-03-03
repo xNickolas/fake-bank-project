@@ -1,12 +1,17 @@
-<div class="card-deposits-container mt-4">
-  <div class="card-name-deposits mb-4">
+<div class="card-transfers-container mt-4">
+  <div class="card-name-transfers mb-4">
     <img src="assets/icons/dollar-sign.svg" class="card-img-statement mr-4">
-    <p class="card-name-text-deposits">Novo depósito</p>
+    <p class="card-name-text-transfers">Nova transferência</p>
   </div>
 
-  <form class="card-deposits-wrapper">
+  <form class="card-transfers-wrapper">
     <div class="form-group-input mb-4">
-      <label for="date">Data do depósito</label>
+      <label for="recipient">Login do destinatário </label>
+      <input type="text" formControlName="contaDestino">
+    </div>
+
+    <div class="form-group-input mb-4">
+      <label for="date">Data da transferência</label>
       <input type="date" formControlName="data">
     </div>
 

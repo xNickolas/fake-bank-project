@@ -4,7 +4,7 @@
     <p class="card-name-text-deposits">Novo depósito</p>
   </div>
 
-  <form class="card-deposits-wrapper">
+  <form class="card-deposits-wrapper" [formGroup]="depositsForm" (ngSubmit)="onSubmit()">
     <div class="form-group-input mb-4">
       <label for="date">Data do depósito</label>
       <input type="date" formControlName="data">
@@ -18,6 +18,13 @@
     <div class="form-group-input mb-4">
       <label for="value">Valor da tranferência</label>
       <input type="text" formControlName="valor">
+    </div>
+
+    <div class="btn-deposit mt-4 mb-5">
+      <button type="submit" class="form-btn ml-2">
+          Depositar
+          <img src="assets/icons/white-arrow.svg">
+      </button>
     </div>
   </form>
 </div>

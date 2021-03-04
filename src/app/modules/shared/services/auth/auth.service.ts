@@ -12,6 +12,7 @@ export class AuthService {
 
   user: User;
   token: string;
+  temporaryPassword: string;
 
   contaBanco: ContaBanco;
   contaCredito: ContaCredito;
@@ -67,6 +68,26 @@ export class AuthService {
     // }
 
     // return false;
+  }
+
+  setNewTemporaryPassword(temporaryPassword: string) {
+    this.temporaryPassword = temporaryPassword;
+    localStorage.setItem('senhaTemporaria', temporaryPassword);
+  }
+
+  getNewTemporaryPassword() {
+    if (this.temporaryPassword) {
+      return this.temporaryPassword;
+    }
+
+    const savedTemporaryPassword = localStorage.getItem('senhaTemporaria');
+
+    if (savedTemporaryPassword) {
+      this.temporaryPassword = savedTemporaryPassword;
+      return this.temporaryPassword;
+    }
+
+    return null;
   }
 
   getNewPassword(){

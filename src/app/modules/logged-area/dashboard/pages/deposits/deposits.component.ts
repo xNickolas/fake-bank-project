@@ -32,7 +32,8 @@ export class DepositsComponent implements OnInit {
   }
 
   getPlansAccount() {
-    this.depositService.getPlanAccount().subscribe(
+    this.depositService.getPlanAccount()
+    .subscribe(
       response => this.onSucessPlansAccount(response),
       error => console.log(error)
     );
@@ -61,6 +62,7 @@ export class DepositsComponent implements OnInit {
 
   onSucessSubmit(response: string) {
     this.depositsForm.reset();
+    this.router.navigate(['/#/dashboard/home']);
   }
 
 }

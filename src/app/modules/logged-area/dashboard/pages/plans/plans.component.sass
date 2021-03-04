@@ -7,9 +7,10 @@
   padding: 2rem 2rem 2rem 2rem
   background: $white
   border-radius: 8px
-  width: 100%
+  max-width: 170vh
   display: flex
   align-content: center
+  overflow: auto
 
 .card-plan
   padding: 1rem 1rem 1rem 1rem
@@ -17,6 +18,8 @@
   border-radius: 8px
   border: 1px solid $black
   margin-right: 1rem
+  width: 260px
+  height: 177px
 
 .card-plan-title
   font-style: normal
@@ -80,10 +83,13 @@
 
 
 .btn-plans
-  width: 30%
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
 
 .form-btn
-  width: 90%
+  width: 50%
   height: 47.66px
   padding: 0px 15px 0px 15px
   background: #68DE5A
@@ -112,5 +118,3 @@
   .card-plans-container
     padding: 2rem
     display: block
-    width: fit-content
-    margin-left: -2.5rem

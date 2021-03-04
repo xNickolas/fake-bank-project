@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
+  @Input() showValue = true;
   @Input() saldoConta: number;
 
   // totalBalance = '10.000,00';

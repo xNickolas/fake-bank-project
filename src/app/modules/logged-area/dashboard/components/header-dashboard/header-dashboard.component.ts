@@ -9,7 +9,7 @@ import { User } from 'src/app/modules/site/interfaces/createAccount.interface';
 })
 export class HeaderDashboardComponent implements OnInit {
 
-  show = true;
+  showValue = false;
   user: User;
 
   constructor(
@@ -25,6 +25,6 @@ export class HeaderDashboardComponent implements OnInit {
   }
 
   btnHide() {
-    this.show = !this.show;
+    this.showValue = !this.showValue;
   }
 }

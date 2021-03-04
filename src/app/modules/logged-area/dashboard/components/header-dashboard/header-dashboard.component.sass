@@ -40,8 +40,10 @@
   align-items: center
   align-content: center
 
-.btn-hidden, img
+.btn-hidden, img:hover
   cursor: pointer
+  transform: rotate(180deg)
+  transition: 500ms ease-in
 
 .btn-reload, img
   cursor: pointer
@@ -94,7 +96,7 @@
   margin-left: 0rem
 
 @media screen and (max-width: $screen-lg-min) 
-.logged-area-container
-  padding-bottom: 7rem
+  .logged-area-container
+    padding-bottom: 7rem
 
 

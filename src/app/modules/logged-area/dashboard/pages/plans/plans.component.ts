@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { take } from 'rxjs/operators';
+import { finalize, take } from 'rxjs/operators';
 import { Plans } from 'src/app/modules/logged-area/interfaces/plans.interface';
 
 import { PlanService } from './plans.service';
@@ -15,6 +15,8 @@ export class PlansComponent implements OnInit {
 
   plans: Plans[];
   plansForm: FormGroup;
+  isLoading: boolean;
+  isNotLoading: boolean;
 
   constructor(
     private plansService: PlanService,
@@ -33,17 +35,26 @@ export class PlansComponent implements OnInit {
   }
 
   loadPlans() {
+    this.isLoading = true;
+    this.isNotLoading = false;
+
     this.plansService.getPlans()
     .pipe(
       take(1),
+      finalize(() => this.isLoading = false)
     )
     .subscribe(
-      response => this.onSucessPlans(response)
+      response => this.onSucessPlans(response),
+      error => this.onErrorPlans(error)
     );
   }
 
   onSucessPlans(response: Plans[]) {
     this.plans = response;
+  }
+
+  onErrorPlans(error: any) {
+    this.isNotLoading = true;
   }
 
   createNewPlan() {

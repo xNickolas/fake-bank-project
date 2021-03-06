@@ -38,6 +38,7 @@
   color: $white
 
 .btn-access
+  overflow: hidden
   background: $white
   width: 100%
   height: 42px
@@ -62,6 +63,21 @@
 
 .account-form
   max-width:400px
+
+.loading-arrow
+  animation: 1.1s linear 0.2s infinite alternate slidein
+
+@keyframes slidein 
+  from 
+    margin-right: 0rem
+
+  to 
+    margin-right: 6rem
+  
+  
+  
+
+  
 
 
 @media screen and (max-width: $screen-lg-min) 

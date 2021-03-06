@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  arrowAcess = false;
 
   constructor(
     private router: Router
@@ -19,5 +20,6 @@ export class HomeComponent implements OnInit {
   onLogin(){
     this.router.navigate(['login']);
   }
+
 
 }

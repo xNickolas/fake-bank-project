@@ -8,4 +8,5 @@ export interface LancamentosResource {
   descricao: string;
   planoConta: Plans;
   tipo: string;
+  // login: Lancamentos['login'];
 }

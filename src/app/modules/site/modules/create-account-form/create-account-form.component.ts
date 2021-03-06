@@ -17,6 +17,7 @@ export class CreateAccountFormComponent implements OnInit {
   errorIsLoading: boolean;
   registerForm: FormGroup;
   user: User;
+  isSpinning = false;
 
   constructor(
     private fb: FormBuilder,
@@ -49,9 +50,10 @@ export class CreateAccountFormComponent implements OnInit {
       senha: this.registerForm.value.password,
     };
 
+    this.isSpinning = true;
     this.createAccountService.createAccount(user)
     .pipe(
-      take(1),
+      take(3),
       finalize(() => this.isLoading = false)
     )
     .subscribe(
@@ -65,7 +67,7 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   showError(nomeControle: string) {
-    if (this.registerForm.get(nomeControle)) {
+    if (!this.registerForm.get(nomeControle)) {
       return false;
     }
     return this.registerForm.get(nomeControle).invalid && this.registerForm.get(nomeControle).touched;
@@ -73,6 +75,7 @@ export class CreateAccountFormComponent implements OnInit {
 
   onError(error: any){
     console.log(error);
+    this.isSpinning = false;
   }
 
   validateFormFields() {

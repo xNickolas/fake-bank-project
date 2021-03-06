@@ -1,4 +1,9 @@
 <div class="card-plans-container mt-4">
+
+  <div class="spinner-border" role="status" *ngIf="isLoading">
+    <span class="sr-only">Loading...</span>
+  </div>
+
   <div class="card-plan" *ngFor="let plan of plans">
     <p class="card-plan-title">{{ plan.descricao}}</p>
     <p class="card-plan-user">{{ plan.login }}</p>

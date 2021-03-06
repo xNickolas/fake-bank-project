@@ -14,6 +14,7 @@ import { LoginService } from '../services/login.service';
 export class LoginComponent implements OnInit {
 
   login: FormGroup;
+  isSpinning = false;
 
   constructor(
     private fb: FormBuilder,
@@ -43,6 +44,7 @@ export class LoginComponent implements OnInit {
 
 
   logIn() {
+    this.isSpinning = true;
     this.loginService.logIn(this.login.value)
     .pipe(
       take(1),
@@ -59,6 +61,7 @@ export class LoginComponent implements OnInit {
 
   onError(error: any) {
     this.router.navigate(['/error']);
+    this.isSpinning = false;
   }
 
 }

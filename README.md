@@ -1,6 +1,7 @@
 # FakeBank
 
-> fake Bank é um projeto desenvolvido pelo Grupo Angulado!
+![Product Gif]<img src"assets/readme/home.gif">
+
 
 
 ## Pré-requisitos

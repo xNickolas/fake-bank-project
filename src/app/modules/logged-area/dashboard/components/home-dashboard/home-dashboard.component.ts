@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { LancamentosResource } from '../../../interfaces/lancamentosResource.interface';
 import { DashboardService } from '../../dashboard.service';
@@ -9,6 +9,8 @@ import { DashboardService } from '../../dashboard.service';
   styleUrls: ['./home-dashboard.component.sass']
 })
 export class HomeDashboardComponent implements OnInit {
+
+  @Input() showValue: boolean;
 
   inicio: string;
   fim: string;

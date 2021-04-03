@@ -8,19 +8,21 @@
   
       <div class="feature-buttons">
         <div class="btn-hidden btn-feature" (click)="btnHide()">
-          <img *ngIf="!showValue" src="assets/icons/eye-show.svg" title="Mostrar">
-          <img *ngIf="showValue" src="assets/icons/eye-hidden.svg" title="Ocultar">
+          <img *ngIf="showValue" src="assets/icons/eye-show.svg" title="Mostrar">
+          <img *ngIf="!showValue" src="assets/icons/eye-hidden.svg" title="Ocultar">
         </div>
-        <div class="btn-reload btn-feature" (click)="reloadPage()">
+        <div class="btn-reload btn-feature">
           <img src="assets/icons/refresh.svg" title="Recarregar">
         </div>
-        <div class="btn-sign-out btn-feature" (click)="logout()">
-          <img src="assets/icons/exit.svg" title="Sair">
+        <div class="btn-sign-out btn-feature">
+          <img src="assets/icons/exit.svg" title="Sair" (click)="logout()">
         </div>
       </div>
     </div>
     <div class=" dashboard-container router-outlet">
         <router-outlet class="cards-wrapper"></router-outlet>
+        <!-- PODE TROCAR PELO COMPONENTE CORRETO-->
+        <!--EXEMPLO O HOME-DASHBOARD-COMPONENT-->
     </div>
   </div>
 </div>

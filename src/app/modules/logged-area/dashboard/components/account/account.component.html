@@ -6,8 +6,8 @@
 
   <div class="card-balance mb-4">
     <p class="card-title-account">Saldo disponível</p>
-    <p *ngIf="showValue" class="card-account-amount">{{ saldoConta | currency: 'BRL' }}</p>
-    <p *ngIf="!showValue" class="card-account-amount">R$ --</p>
+    <p *ngIf="!showValue" class="card-account-amount">{{ saldoConta | currency: 'BRL' }}</p>
+    <p *ngIf="showValue" class="card-account-amount">R$ --</p>
   </div>
 
   <div class="card-account-details">

@@ -1,6 +1,6 @@
 <div class="card-plans-container mt-4">
 
-  <div class="spinner-border" role="status" *ngIf="isLoading">
+  <div class="spinner-border center" role="status" *ngIf="isLoading">
     <span class="sr-only">Loading...</span>
   </div>
 
@@ -16,7 +16,7 @@
     <p class="card-name-text-plans">Crie um novo plano de conta</p>
   </div>
 
-  <form class="card-plans-wrapper" [formGroup]="plansForm" (ngSubmit)="onSubmit()">
+  <form class="form-plans-wrapper" [formGroup]="plansForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group-input mb-4">
       <label for="descripton">Descrição</label>
